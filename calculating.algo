@@ -2,12 +2,18 @@ ALGORITHM length_number
 VAR
    s:STRING
    n,i,j:INTEGER
+   t table of STRING
+   num_wrd,num_vowles:INTEGER
 BEGIN
     WRITE("ENTER YOUR SINTENCE:")
-    READ(s)
-    n:=length(s)
+    READ(s) 
+    n:= LENGTH(s)
+    //n is the length of the sentence
+    IF (n = 0) THEN
+        WRITE("the sentence is empty")
+        RETURN
     WRITE("the length of sentence is:",n)
-    num_wrd:= 1 /at least one word/
+    num_wrd:= 1 //at least one word
     FOR i FROM 1 TO n STEP 1  DO
         IF (s[i] = ' ') THEN
         num_wrd := num_wrd+1
