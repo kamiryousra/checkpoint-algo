@@ -1,1 +1,24 @@
-
+ALGORITHM length_number
+VAR
+   s:STRING
+   n,i,j:INTEGER
+BEGIN
+    WRITE("ENTER YOUR SINTENCE:")
+    READ(s)
+    n:=length(s)
+    WRITE("the length of sentence is:",n)
+    num_wrd:= 1 /at least one word/
+    FOR i FROM 1 TO n STEP 1  DO
+        IF (s[i] = ' ') THEN
+        num_wrd := num_wrd+1
+        END_IF
+    END_FOR
+    WRITE("number of words is:",num_wrd)
+    num_vowles:= 0 
+    FOR j FROM 0 TO n STEP 1  DO
+        IF (s[j] ='a' OR s[j] ='e' OR s[j] ='i' OR s[j] ='o' OR s[j] ='u' OR s[i] = 'A' OR s[i] = 'E' OR s[i] = 'I' OR s[i] = 'O' OR s[i] = 'U') THEN
+            num_vowles:=num_vowles+1
+        END_IF
+    END_FOR
+    WRITE("the number of vowles is:",num_vowles)
+END
