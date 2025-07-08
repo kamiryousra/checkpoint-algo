@@ -2,7 +2,6 @@ ALGORITHM length_number
 VAR
    s:STRING
    n,i,j:INTEGER
-   t table of STRING
    num_wrd,num_vowles:INTEGER
 BEGIN
     WRITE("ENTER YOUR SINTENCE:")
